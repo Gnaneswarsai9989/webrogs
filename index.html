@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebROGS – Web Solutions | Nellore</title>
+  <meta name="description"
+    content="WebROGS builds fast, modern, scalable websites & apps for every business. Based in Nellore, Andhra Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── CURSOR ── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <img src="logo.png" alt="WebROGS" class="logo-img" onerror="this.style.display='none'" />
+        <span class="logo-text">Web<span class="logo-rogs">ROGS</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#services" class="mob-link">Services</a></li>
+      <li><a href="#portfolio" class="mob-link">Portfolio</a></li>
+      <li><a href="#pricing" class="mob-link">Pricing</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Trusted by 100+ businesses across India
+      </div>
+      <h1 class="hero-title reveal-up" style="--d:0.1s">
+        <span class="line">We turn ideas</span>
+        <span class="line">into digital</span>
+        <span class="line">solutions</span>
+        <span class="line">that drive</span>
+        <span class="line accent">real growth.</span>
+      </h1>
+      <p class="hero-sub reveal-up" style="--d:0.3s">100+ Clients &nbsp;|&nbsp; IT Development &nbsp;|&nbsp; Digital
+        Marketing &nbsp;|&nbsp; Staffing &nbsp;|&nbsp; Compliance</p>
+      <div class="hero-btns reveal-up" style="--d:0.5s">
+        <a href="#contact" class="btn btn-primary">Get a Quote →</a>
+        <a href="#services" class="btn btn-text">Explore Services</a>
+      </div>
+      <div class="hero-stats reveal-up" style="--d:0.7s">
+        <div class="stat">
+          <div class="stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div class="stat-num-row"><span class="num" data-target="100">0</span><span>+</span></div>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <div class="stat-num-row"><span class="num" data-target="250">0</span><span>+</span></div>
+          <p>Projects Delivered</p>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l19-9-9 19-2-8-8-2z" />
+            </svg>
+          </div>
+          <div class="stat-num-row"><span class="num" data-target="500">0</span><span>+</span></div>
+          <p>Campaigns Run</p>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div class="stat-num-row"><span class="num" data-target="5">0</span><span>+</span></div>
+          <p>Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Web Design</span><span class="dot">✦</span>
+      <span>E-Commerce</span><span class="dot">✦</span>
+      <span>SEO Optimization</span><span class="dot">✦</span>
+      <span>React & MERN</span><span class="dot">✦</span>
+      <span>UI/UX Design</span><span class="dot">✦</span>
+      <span>Mobile Apps</span><span class="dot">✦</span>
+      <span>Digital Marketing</span><span class="dot">✦</span>
+      <span>Admin Panels</span><span class="dot">✦</span>
+      <span>Web Design</span><span class="dot">✦</span>
+      <span>E-Commerce</span><span class="dot">✦</span>
+      <span>SEO Optimization</span><span class="dot">✦</span>
+      <span>React & MERN</span><span class="dot">✦</span>
+      <span>UI/UX Design</span><span class="dot">✦</span>
+      <span>Mobile Apps</span><span class="dot">✦</span>
+      <span>Digital Marketing</span><span class="dot">✦</span>
+      <span>Admin Panels</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section class="about section" id="about">
+    <div class="section-divider"></div>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-label reveal-left">About WebROGS</p>
+          <h2 class="section-title reveal-left" style="--d:0.1s">We Design Websites That <span class="accent">Grow
+              Businesses</span></h2>
+          <p class="about-desc reveal-left" style="--d:0.2s">WebROGS is a Nellore-based web solutions studio
+            specializing in building high-performance digital products. From startups to established brands, we craft
+            beautiful, functional websites that drive real results.</p>
+          <p class="about-desc reveal-left" style="--d:0.3s">Our team combines cutting-edge technology with creative
+            design thinking to deliver websites that don't just look good — they perform. Every pixel, every
+            interaction, every line of code is optimized for your success.</p>
+          <div class="about-tags reveal-left" style="--d:0.4s">
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Express</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">AWS</span>
+          </div>
+          <a href="#contact" class="btn btn-primary reveal-left" style="--d:0.5s">Work With Us</a>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="about-card-main">
+            <div class="about-card-inner">
+              <div class="about-icon-row">
+                <div class="about-icon">⚡</div>
+                <div class="about-icon-label">Fast Delivery</div>
+              </div>
+              <div class="about-icon-row">
+                <div class="about-icon">🎯</div>
+                <div class="about-icon-label">Goal Oriented</div>
+              </div>
+              <div class="about-icon-row">
+                <div class="about-icon">🔒</div>
+                <div class="about-icon-label">Secure & Reliable</div>
+              </div>
+              <div class="about-icon-row">
+                <div class="about-icon">📱</div>
+                <div class="about-icon-label">Mobile First</div>
+              </div>
+            </div>
+            <div class="about-badge-float">
+              <span class="big-num">50+</span>
+              <span>Websites<br />Delivered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider flip"></div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="services section" id="services">
+    <div class="container">
+      <p class="section-label text-center reveal-up">What We Build</p>
+      <h2 class="section-title text-center reveal-up" style="--d:0.1s">Our <span class="accent">Services</span></h2>
+      <p class="section-sub text-center reveal-up" style="--d:0.2s">From concept to launch — we handle everything your
+        digital presence needs.</p>
+      <div class="services-grid">
+        <div class="service-card reveal-up" style="--d:0s">
+          <div class="service-icon">🛒</div>
+          <h3>E-Commerce Website</h3>
+          <p>Full-featured online stores with product management, cart, payment gateway, and admin dashboard. Built to
+            convert visitors into customers.</p>
+          <div class="service-tech">React · Node · MongoDB · Razorpay</div>
+        </div>
+        <div class="service-card reveal-up" style="--d:0.1s">
+          <div class="service-icon">💼</div>
+          <h3>Business Website</h3>
+          <p>Professional websites for businesses of all sizes. SEO-optimized, fast-loading, with contact systems and
+            admin panel included.</p>
+          <div class="service-tech">React · Express · MySQL</div>
+        </div>
+        <div class="service-card reveal-up" style="--d:0.2s">
+          <div class="service-icon">🏋️</div>
+          <h3>Gym / Fitness Website</h3>
+          <p>Dynamic fitness websites with class schedules, membership management, trainer profiles, and online booking
+            systems.</p>
+          <div class="service-tech">React · Firebase · Tailwind</div>
+        </div>
+        <div class="service-card reveal-up" style="--d:0.3s">
+          <div class="service-icon">🍽️</div>
+          <h3>Restaurant Website</h3>
+          <p>Beautiful restaurant websites with menus, online ordering, table reservations, and customer review
+            management.</p>
+          <div class="service-tech">Next.js · Node · PostgreSQL</div>
+        </div>
+        <div class="service-card reveal-up" style="--d:0.4s">
+          <div class="service-icon">🎓</div>
+          <h3>Education Website</h3>
+          <p>Learning management systems, course platforms, student portals, and institutional websites with complete
+            admin control.</p>
+          <div class="service-tech">MERN Stack · AWS · Redux</div>
+        </div>
+        <div class="service-card reveal-up" style="--d:0.5s">
+          <div class="service-icon">📊</div>
+          <h3>Portfolio & Personal</h3>
+          <p>Stunning personal portfolios and freelancer sites that showcase your work and attract the right clients or
+            employers.</p>
+          <div class="service-tech">React · GSAP · Three.js</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TECHNOLOGIES ── -->
+  <section class="tech-section section" id="tech">
+    <div class="section-divider"></div>
+    <div class="container">
+      <p class="section-label text-center reveal-up">Our Stack</p>
+      <h2 class="section-title text-center reveal-up" style="--d:0.1s">Technologies We <span
+          class="accent">Master</span></h2>
+      <div class="tech-grid">
+        <div class="tech-item reveal-up" style="--d:0s">
+          <div class="tech-logo">⚛️</div><span>React.js</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.05s">
+          <div class="tech-logo">🟢</div><span>Node.js</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.1s">
+          <div class="tech-logo">🍃</div><span>MongoDB</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.15s">
+          <div class="tech-logo">🚂</div><span>Express.js</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.2s">
+          <div class="tech-logo">▲</div><span>Next.js</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.25s">
+          <div class="tech-logo">🎨</div><span>Tailwind CSS</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.3s">
+          <div class="tech-logo">🔥</div><span>Firebase</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.35s">
+          <div class="tech-logo">☁️</div><span>AWS</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.4s">
+          <div class="tech-logo">🐬</div><span>MySQL</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.45s">
+          <div class="tech-logo">📦</div><span>Redux</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.5s">
+          <div class="tech-logo">🐙</div><span>GitHub</span>
+        </div>
+        <div class="tech-item reveal-up" style="--d:0.55s">
+          <div class="tech-logo">🐳</div><span>Docker</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider flip"></div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <p class="section-label text-center reveal-up">Our Work</p>
+      <h2 class="section-title text-center reveal-up" style="--d:0.1s">Live <span class="accent">Projects</span></h2>
+      <p class="section-sub text-center reveal-up" style="--d:0.2s">Real websites we've built — live, functional, and
+        generating results.</p>
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card reveal-up" style="--d:0s">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder" style="--clr:#22c55e">
+              <span class="p-icon">🌿</span>
+              <div class="p-lines">
+                <div class="p-line"></div>
+                <div class="p-line w60"></div>
+                <div class="p-line w40"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://growgreensainlr.netlify.app" target="_blank" class="portfolio-link">View Live →</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Grow Green Live</h3>
+            <p>A modern agriculture & green solutions platform built with React and Firebase. Features product showcase,
+              inquiry forms, and a responsive design optimized for mobile users.</p>
+            <div class="portfolio-tags">
+              <span>React.js</span><span>Firebase</span><span>Tailwind CSS</span>
+            </div>
+            <a href="https://growgreensainlr.netlify.app" target="_blank"
+              class="portfolio-url">growgreensainlr.netlify.app ↗</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal-up" style="--d:0.15s">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder" style="--clr:#f59e0b">
+              <span class="p-icon">🎬</span>
+              <div class="p-lines">
+                <div class="p-line"></div>
+                <div class="p-line w60"></div>
+                <div class="p-line w40"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://cinefy19.netlify.app" target="_blank" class="portfolio-link">View Live →</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Cinefy – Movie Streaming App</h3>
+            <p>A full-featured movie streaming platform with TMDB API integration, user authentication, watchlists, and
+              a sleek dark interface built with MERN stack.</p>
+            <div class="portfolio-tags">
+              <span>MERN Stack</span><span>TMDB API</span><span>JWT Auth</span>
+            </div>
+            <a href="https://cinefy19.netlify.app" target="_blank" class="portfolio-url">cinefy19.netlify.app ↗</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal-up" style="--d:0.3s">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder" style="--clr:#3b82f6">
+              <span class="p-icon">📊</span>
+              <div class="p-lines">
+                <div class="p-line"></div>
+                <div class="p-line w60"></div>
+                <div class="p-line w40"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://nexusanalyticssai.netlify.app" target="_blank" class="portfolio-link">View Live →</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Nexus Analytics</h3>
+            <p>A social media analytics platform with real-time dashboards, data visualization charts, engagement
+              tracking, and comprehensive reporting tools for marketers.</p>
+            <div class="portfolio-tags">
+              <span>React.js</span><span>Chart.js</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+            <a href="https://nexusanalyticssai.netlify.app" target="_blank"
+              class="portfolio-url">nexusanalyticssai.netlify.app ↗</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal-up" style="--d:0.45s">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder" style="--clr:#ec4899">
+              <span class="p-icon">👗</span>
+              <div class="p-lines">
+                <div class="p-line"></div>
+                <div class="p-line w60"></div>
+                <div class="p-line w40"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://trendorra-black.vercel.app" target="_blank" class="portfolio-link">View Live →</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Trendorra – Fashion Platform</h3>
+            <p>A premium fashion e-commerce platform with product filtering, cart management, wishlist, Razorpay
+              payments, and a stunning dark luxury aesthetic.</p>
+            <div class="portfolio-tags">
+              <span>Next.js</span><span>MongoDB</span><span>Razorpay</span><span>Redux</span>
+            </div>
+            <a href="https://trendorra-black.vercel.app" target="_blank"
+              class="portfolio-url">trendorra-black.vercel.app ↗</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal-up" style="--d:0.6s">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder" style="--clr:#a855f7">
+              <span class="p-icon">🎨</span>
+              <div class="p-lines">
+                <div class="p-line"></div>
+                <div class="p-line w60"></div>
+                <div class="p-line w40"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://creator-craft-media.vercel.app" target="_blank" class="portfolio-link">View Live →</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Creative Craft Media</h3>
+            <p>A creative agency portfolio platform showcasing multimedia work, services, and team — built with React
+              and GSAP animations for a cinematic feel.</p>
+            <div class="portfolio-tags">
+              <span>React.js</span><span>GSAP</span><span>Framer Motion</span>
+            </div>
+            <a href="https://creator-craft-media.vercel.app" target="_blank"
+              class="portfolio-url">creator-craft-media.vercel.app ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY US ── -->
+  <section class="why-section section" id="why">
+    <div class="section-divider"></div>
+    <div class="container">
+      <p class="section-label text-center reveal-up">Why WebROGS</p>
+      <h2 class="section-title text-center reveal-up" style="--d:0.1s">What Sets Us <span class="accent">Apart</span>
+      </h2>
+      <div class="why-grid">
+        <div class="why-card reveal-up" style="--d:0s">
+          <div class="why-num">01</div>
+          <h3>Modern UI/UX Design</h3>
+          <p>Every site we build is designed to impress — clean, modern layouts that convert visitors into customers.
+          </p>
+        </div>
+        <div class="why-card reveal-up" style="--d:0.1s">
+          <div class="why-num">02</div>
+          <h3>SEO Optimized</h3>
+          <p>Built with SEO best practices from day one — your site will rank higher and get found by the right people.
+          </p>
+        </div>
+        <div class="why-card reveal-up" style="--d:0.2s">
+          <div class="why-num">03</div>
+          <h3>Mobile Responsive</h3>
+          <p>Every project is fully responsive — perfect on any screen size, from phones to desktop monitors.</p>
+        </div>
+        <div class="why-card reveal-up" style="--d:0.3s">
+          <div class="why-num">04</div>
+          <h3>Fast Performance</h3>
+          <p>We obsess over speed. Optimized images, lazy loading, and clean code ensure blazing fast load times.</p>
+        </div>
+        <div class="why-card reveal-up" style="--d:0.4s">
+          <div class="why-num">05</div>
+          <h3>Secure Backend</h3>
+          <p>Robust authentication, encrypted data, and secure APIs — your data and your users are always protected.</p>
+        </div>
+        <div class="why-card reveal-up" style="--d:0.5s">
+          <div class="why-num">06</div>
+          <h3>Ongoing Support</h3>
+          <p>We don't disappear after launch. We provide ongoing maintenance, updates, and support whenever you need it.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider flip"></div>
+  </section>
+
+  <!-- ── PRICING ── -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <p class="section-label text-center reveal-up">Investment</p>
+      <h2 class="section-title text-center reveal-up" style="--d:0.1s">Transparent <span class="accent">Pricing</span>
+      </h2>
+      <p class="section-sub text-center reveal-up" style="--d:0.2s">Affordable prices for every business size. No hidden
+        charges, no surprises.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal-up" style="--d:0s">
+          <div class="pricing-badge" style="background:var(--blue)">Basic</div>
+          <h3>Basic Website</h3>
+          <div class="price">₹4,999<span>/project</span></div>
+          <ul class="pricing-list">
+            <li>✓ Responsive Design</li>
+            <li>✓ SEO Friendly</li>
+            <li>✓ Fast Loading</li>
+            <li>✓ Contact Form</li>
+            <li>✓ Basic Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost w100">Get Started</a>
+        </div>
+        <div class="pricing-card featured reveal-up" style="--d:0.15s">
+          <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-badge" style="background:var(--accent)">Business</div>
+          <h3>Business Website</h3>
+          <div class="price">₹9,999<span>/project</span></div>
+          <ul class="pricing-list">
+            <li>✓ Up to 10 Pages</li>
+            <li>✓ Admin Panel</li>
+            <li>✓ Contact System</li>
+            <li>✓ SEO Optimization</li>
+            <li>✓ Custom Design</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w100">Get Started</a>
+        </div>
+        <div class="pricing-card reveal-up" style="--d:0.3s">
+          <div class="pricing-badge" style="background:#22c55e">E-Commerce</div>
+          <h3>E-Commerce Website</h3>
+          <div class="price">₹19,999<span>/project</span></div>
+          <ul class="pricing-list">
+            <li>✓ Product Management</li>
+            <li>✓ Payment Gateway</li>
+            <li>✓ Admin Dashboard</li>
+            <li>✓ Order Management</li>
+            <li>✓ SEO & Speed Optimized</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost w100">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact section" id="contact">
+    <div class="section-divider"></div>
+    <div class="container">
+      <p class="section-label text-center reveal-up">Get In Touch</p>
+      <h2 class="section-title text-center reveal-up" style="--d:0.1s">Start Your <span class="accent">Project</span>
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <h3>Let's Build Something Amazing</h3>
+          <p>Have an idea? We'd love to hear it. Send us a message and we'll get back to you within 24 hours to discuss
+            your project.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="ci-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:webrogsofficial@gmail.com">webrogsofficial@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+916304000624">6304000624</a> / <a href="tel:+917801057301">7801057301</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <span>Nellore, Andhra Pradesh</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.instagram.com/webrogs.in" target="_blank" class="social-link">Instagram</a>
+            <a href="https://www.facebook.com/WebRogs" target="_blank" class="social-link">Facebook</a>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 98765 43210" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>Website Type</label>
+              <select>
+                <option>Select website type...</option>
+                <option>Basic Website</option>
+                <option>Business Website</option>
+                <option>E-Commerce Website</option>
+                <option>Gym / Fitness Website</option>
+                <option>Restaurant Website</option>
+                <option>Education Website</option>
+                <option>Custom Project</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tell Us About Your Project</label>
+              <textarea placeholder="Describe your project, goals, and any specific requirements..."
+                rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w100">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo.png" alt="WebROGS" class="footer-logo" onerror="this.style.display='none'" />
+          <span class="footer-logo-text">WebROGS</span>
+          <p>Building the web, one pixel at a time. Fast · Modern · Scalable.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Pages</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <a href="#services">E-Commerce</a>
+          <a href="#services">Business Sites</a>
+          <a href="#services">Restaurant</a>
+          <a href="#services">Education</a>
+          <a href="#services">Portfolio</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Contact</h4>
+          <a href="mailto:webrogsofficial@gmail.com">webrogsofficial@gmail.com</a>
+          <a href="tel:+916304000624">6304000624</a>
+          <a href="tel:+917801057301">7801057301</a>
+          <span>Nellore, AP</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 WebROGS Web Solutions. All rights reserved.</p>
+        <p>Made with ❤️ by
+          <link href="https://webrogs.in">webrogs.in</link>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
