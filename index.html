@@ -10,16 +10,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- ── CURSOR ── -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursorTrail"></div>
+  <!-- ── SCROLL PROGRESS ── -->
+  <div id="progress-bar"></div>
+
 
   <!-- ── NAV ── -->
   <nav class="nav" id="nav">
@@ -33,7 +33,6 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Get Started</a>
@@ -50,17 +49,24 @@
       <li><a href="#about" class="mob-link">About</a></li>
       <li><a href="#services" class="mob-link">Services</a></li>
       <li><a href="#portfolio" class="mob-link">Portfolio</a></li>
-      <li><a href="#pricing" class="mob-link">Pricing</a></li>
       <li><a href="#contact" class="mob-link">Contact</a></li>
     </ul>
+    <div class="mobile-menu-cta">
+      <a href="#contact" class="mob-link btn btn-primary" style="font-size:0.85rem;padding:14px 36px;">Get Started →</a>
+    </div>
   </div>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
 
   <!-- ── HERO ── -->
   <section class="hero" id="home">
     <div class="hero-bg">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="hero.mp4" type="video/mp4" />
+      </video>
       <div class="orb orb1"></div>
       <div class="orb orb2"></div>
       <div class="orb orb3"></div>
+      <div class="orb orb4"></div>
       <div class="particles" id="particles"></div>
     </div>
     <div class="hero-content">
@@ -68,23 +74,28 @@
         <span class="badge-dot"></span>
         Trusted by 100+ businesses across India
       </div>
-      <h1 class="hero-title reveal-up" style="--d:0.1s">
-        <span class="line">We turn ideas</span>
-        <span class="line">into digital</span>
-        <span class="line">solutions</span>
-        <span class="line">that drive</span>
-        <span class="line accent">real growth.</span>
-      </h1>
-      <p class="hero-sub reveal-up" style="--d:0.3s">100+ Clients &nbsp;|&nbsp; IT Development &nbsp;|&nbsp; Digital
-        Marketing &nbsp;|&nbsp; Staffing &nbsp;|&nbsp; Compliance</p>
-      <div class="hero-btns reveal-up" style="--d:0.5s">
-        <a href="#contact" class="btn btn-primary">Get a Quote →</a>
-        <a href="#services" class="btn btn-text">Explore Services</a>
+      <div class="hero-btns reveal-up" style="--d:0.3s;">
+        <a href="#contact" class="btn-hero-pill">Get a Quote →</a>
       </div>
-      <div class="hero-stats reveal-up" style="--d:0.7s">
+    </div>
+  </section>
+
+  <!-- ── INTRODUCTION & STATS ── -->
+  <section class="intro-section section" id="intro">
+    <div class="section-divider"></div>
+    <div class="container text-center">
+      <h2 class="section-title reveal-up" style="--d:0.1s">
+        We turn ideas into digital solutions<br>
+        <span class="accent">that drive real growth.</span>
+      </h2>
+      <p class="section-sub reveal-up" style="--d:0.2s" style="margin-bottom: 50px;">
+        100+ Clients &nbsp;|&nbsp; IT Development &nbsp;|&nbsp; Digital Marketing &nbsp;|&nbsp; Staffing &nbsp;|&nbsp; Compliance
+      </p>
+      
+      <div class="hero-stats reveal-up" style="--d:0.4s; margin: 0 auto 50px;">
         <div class="stat">
           <div class="stat-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.8"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
@@ -95,7 +106,7 @@
         </div>
         <div class="stat">
           <div class="stat-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.8"
               stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6" />
               <polyline points="8 6 2 12 8 18" />
@@ -106,7 +117,7 @@
         </div>
         <div class="stat">
           <div class="stat-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.8"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 11l19-9-9 19-2-8-8-2z" />
             </svg>
@@ -116,7 +127,7 @@
         </div>
         <div class="stat">
           <div class="stat-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c87f0a" stroke-width="1.8"
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.8"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
@@ -124,6 +135,10 @@
           <div class="stat-num-row"><span class="num" data-target="5">0</span><span>+</span></div>
           <p>Years Experience</p>
         </div>
+      </div>
+
+      <div class="reveal-up" style="--d:0.5s">
+        <a href="#services" class="btn btn-ghost">Explore Our Services</a>
       </div>
     </div>
   </section>
@@ -152,6 +167,7 @@
 
   <!-- ── ABOUT ── -->
   <section class="about section" id="about">
+    <div class="about-glow-orb"></div>
     <div class="section-divider"></div>
     <div class="container">
       <div class="about-grid">
@@ -178,29 +194,32 @@
           <a href="#contact" class="btn btn-primary reveal-left" style="--d:0.5s">Work With Us</a>
         </div>
         <div class="about-right reveal-right">
-          <div class="about-card-main">
-            <div class="about-card-inner">
-              <div class="about-icon-row">
-                <div class="about-icon">⚡</div>
-                <div class="about-icon-label">Fast Delivery</div>
-              </div>
-              <div class="about-icon-row">
-                <div class="about-icon">🎯</div>
-                <div class="about-icon-label">Goal Oriented</div>
-              </div>
-              <div class="about-icon-row">
-                <div class="about-icon">🔒</div>
-                <div class="about-icon-label">Secure & Reliable</div>
-              </div>
-              <div class="about-icon-row">
-                <div class="about-icon">📱</div>
-                <div class="about-icon-label">Mobile First</div>
-              </div>
+          <div class="about-features-grid">
+            <div class="about-feature-card" style="--d:0s">
+              <div class="af-icon">⚡</div>
+              <h3>Fast Delivery</h3>
+              <p>Optimized assets and light scripts for blazingly fast load times.</p>
             </div>
-            <div class="about-badge-float">
-              <span class="big-num">50+</span>
-              <span>Websites<br />Delivered</span>
+            <div class="about-feature-card" style="--d:0.1s">
+              <div class="af-icon">🎯</div>
+              <h3>Goal Oriented</h3>
+              <p>Designed around your business objectives to maximize conversions.</p>
             </div>
+            <div class="about-feature-card" style="--d:0.2s">
+              <div class="af-icon">🔒</div>
+              <h3>Secure & Clean</h3>
+              <p>Robust database schemas and strict encryption protocols.</p>
+            </div>
+            <div class="about-feature-card" style="--d:0.3s">
+              <div class="af-icon">📱</div>
+              <h3>Mobile First</h3>
+              <p>Fluid responsiveness to ensure a seamless experience on all screens.</p>
+            </div>
+          </div>
+          <div class="about-badge-float">
+            <div class="badge-bg-glow"></div>
+            <span class="big-num">50+</span>
+            <span>Websites<br />Delivered</span>
           </div>
         </div>
       </div>
@@ -217,46 +236,70 @@
         digital presence needs.</p>
       <div class="services-grid">
         <div class="service-card reveal-up" style="--d:0s">
-          <div class="service-icon">🛒</div>
-          <h3>E-Commerce Website</h3>
-          <p>Full-featured online stores with product management, cart, payment gateway, and admin dashboard. Built to
-            convert visitors into customers.</p>
-          <div class="service-tech">React · Node · MongoDB · Razorpay</div>
+          <div class="service-card-bg" style="background-image: url('ecommerce_service.png');"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-icon">🛒</div>
+            <h3>E-Commerce Website</h3>
+            <p>Full-featured online stores with product management, cart, payment gateway, and admin dashboard. Built to
+              convert visitors into customers.</p>
+            <div class="service-tech">React · Node · MongoDB · Razorpay</div>
+          </div>
         </div>
         <div class="service-card reveal-up" style="--d:0.1s">
-          <div class="service-icon">💼</div>
-          <h3>Business Website</h3>
-          <p>Professional websites for businesses of all sizes. SEO-optimized, fast-loading, with contact systems and
-            admin panel included.</p>
-          <div class="service-tech">React · Express · MySQL</div>
+          <div class="service-card-bg" style="background-image: url('business_service.png');"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-icon">💼</div>
+            <h3>Business Website</h3>
+            <p>Professional websites for businesses of all sizes. SEO-optimized, fast-loading, with contact systems and
+              admin panel included.</p>
+            <div class="service-tech">React · Express · MySQL</div>
+          </div>
         </div>
         <div class="service-card reveal-up" style="--d:0.2s">
-          <div class="service-icon">🏋️</div>
-          <h3>Gym / Fitness Website</h3>
-          <p>Dynamic fitness websites with class schedules, membership management, trainer profiles, and online booking
-            systems.</p>
-          <div class="service-tech">React · Firebase · Tailwind</div>
+          <div class="service-card-bg" style="background-image: url('fitness_service.png');"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-icon">🏋️</div>
+            <h3>Gym / Fitness Website</h3>
+            <p>Dynamic fitness websites with class schedules, membership management, trainer profiles, and online booking
+              systems.</p>
+            <div class="service-tech">React · Firebase · Tailwind</div>
+          </div>
         </div>
         <div class="service-card reveal-up" style="--d:0.3s">
-          <div class="service-icon">🍽️</div>
-          <h3>Restaurant Website</h3>
-          <p>Beautiful restaurant websites with menus, online ordering, table reservations, and customer review
-            management.</p>
-          <div class="service-tech">Next.js · Node · PostgreSQL</div>
+          <div class="service-card-bg" style="background-image: url('restaurant_service.png');"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-icon">🍽️</div>
+            <h3>Restaurant Website</h3>
+            <p>Beautiful restaurant websites with menus, online ordering, table reservations, and customer review
+              management.</p>
+            <div class="service-tech">Next.js · Node · PostgreSQL</div>
+          </div>
         </div>
         <div class="service-card reveal-up" style="--d:0.4s">
-          <div class="service-icon">🎓</div>
-          <h3>Education Website</h3>
-          <p>Learning management systems, course platforms, student portals, and institutional websites with complete
-            admin control.</p>
-          <div class="service-tech">MERN Stack · AWS · Redux</div>
+          <div class="service-card-bg" style="background-image: url('education_service.png');"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-icon">🎓</div>
+            <h3>Education Website</h3>
+            <p>Learning management systems, course platforms, student portals, and institutional websites with complete
+              admin control.</p>
+            <div class="service-tech">MERN Stack · AWS · Redux</div>
+          </div>
         </div>
         <div class="service-card reveal-up" style="--d:0.5s">
-          <div class="service-icon">📊</div>
-          <h3>Portfolio & Personal</h3>
-          <p>Stunning personal portfolios and freelancer sites that showcase your work and attract the right clients or
-            employers.</p>
-          <div class="service-tech">React · GSAP · Three.js</div>
+          <div class="service-card-bg" style="background-image: url('portfolio_service.png');"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-icon">📊</div>
+            <h3>Portfolio & Personal</h3>
+            <p>Stunning personal portfolios and freelancer sites that showcase your work and attract the right clients or
+              employers.</p>
+            <div class="service-tech">React · GSAP · Three.js</div>
+          </div>
         </div>
       </div>
     </div>
@@ -315,21 +358,14 @@
   <section class="portfolio section" id="portfolio">
     <div class="container">
       <p class="section-label text-center reveal-up">Our Work</p>
-      <h2 class="section-title text-center reveal-up" style="--d:0.1s">Live <span class="accent">Projects</span></h2>
+      <h2 class="section-title text-center reveal-up" style="--d:0.1s">Websites We've <span class="accent">Built</span></h2>
       <p class="section-sub text-center reveal-up" style="--d:0.2s">Real websites we've built — live, functional, and
         generating results.</p>
       <div class="portfolio-grid">
 
         <div class="portfolio-card reveal-up" style="--d:0s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#22c55e">
-              <span class="p-icon">🌿</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_growgreen.png" alt="Grow Green Live" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://growgreensainlr.netlify.app" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -348,14 +384,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:0.15s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#f59e0b">
-              <span class="p-icon">🎬</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_cinefy.png" alt="Cinefy – Movie Streaming App" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://cinefy19.netlify.app" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -373,14 +402,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:0.3s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#3b82f6">
-              <span class="p-icon">📊</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_nexus.png" alt="Nexus Analytics" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://nexusanalyticssai.netlify.app" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -399,14 +421,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:0.45s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#ec4899">
-              <span class="p-icon">👗</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_trendorra.png" alt="Trendorra – Fashion Platform" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://trendorra-black.vercel.app" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -425,14 +440,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:0.6s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#a855f7">
-              <span class="p-icon">🎨</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_creatorcraft.png" alt="Creative Craft Media" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://www.creatorcraftmedia.in/" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -451,14 +459,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:0.75s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#e11d48">
-              <span class="p-icon">💍</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_rcwedding.png" alt="RC Wedding Stories" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://www.rcweddingstories.com" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -476,14 +477,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:0.9s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#d4af37">
-              <span class="p-icon">🎬</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_asassistants.png" alt="AS Assistants" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://as-assisstant-website.vercel.app/" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -501,14 +495,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:1.05s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#0d9488">
-              <span class="p-icon">🛒</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_harisiri.png" alt="Hari Siri" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://harisiri.vercel.app/" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -526,14 +513,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:1.2s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#db2777">
-              <span class="p-icon">🎥</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_akhila.png" alt="Akhila Gangapatnam" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://akhila-gangapatnam-protfolio.vercel.app/" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -551,14 +531,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:1.35s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#f97316">
-              <span class="p-icon">🚀</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="project_creatorcraft.png" alt="Creator Craft Media – Workshop" class="portfolio-img-file" />
             <div class="portfolio-overlay">
               <a href="https://creator-craft-media-workshop.vercel.app/" target="_blank" class="portfolio-link">View Live →</a>
             </div>
@@ -576,14 +549,7 @@
 
         <div class="portfolio-card reveal-up" style="--d:1.5s">
           <div class="portfolio-img">
-            <div class="portfolio-placeholder" style="--clr:#06b6d4">
-              <span class="p-icon">⚡</span>
-              <div class="p-lines">
-                <div class="p-line"></div>
-                <div class="p-line w60"></div>
-                <div class="p-line w40"></div>
-              </div>
-            </div>
+            <img src="ecommerce_service.png" alt="N Electronics" class="portfolio-img-file" />
             <div class="portfolio-overlay" style="flex-direction: column; gap: 12px;">
               <a href="https://nelloreelectronics.com" target="_blank" class="portfolio-link">View .com →</a>
               <a href="https://nelloreelectronics.store" target="_blank" class="portfolio-link">View .store →</a>
@@ -599,6 +565,23 @@
               <a href="https://nelloreelectronics.com" target="_blank" class="portfolio-url">nelloreelectronics.com ↗</a>
               <a href="https://nelloreelectronics.store" target="_blank" class="portfolio-url">nelloreelectronics.store ↗</a>
             </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal-up" style="--d:1.65s">
+          <div class="portfolio-img">
+            <img src="education_service.png" alt="ITM University" class="portfolio-img-file" />
+            <div class="portfolio-overlay">
+              <a href="https://itm-university.vercel.app/" target="_blank" class="portfolio-link">View Live →</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>ITM University</h3>
+            <p>A premium university admissions platform featuring course listings, department showcases, faculty profiles, and a streamlined inquiry system — designed to attract prospective students.</p>
+            <div class="portfolio-tags">
+              <span>React.js</span><span>Vercel</span><span>Tailwind CSS</span>
+            </div>
+            <a href="https://itm-university.vercel.app/" target="_blank" class="portfolio-url">itm-university.vercel.app ↗</a>
           </div>
         </div>
 
@@ -749,7 +732,6 @@
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#pricing">Pricing</a>
         </div>
         <div class="footer-links-col">
           <h4>Services</h4>
@@ -769,9 +751,7 @@
       </div>
       <div class="footer-bottom">
         <p>© 2025 WebROGS Web Solutions. All rights reserved.</p>
-        <p>Made with ❤️ by
-          <link href="https://webrogs.in">webrogs.in</link>
-        </p>
+        <p>Made with ❤️ by <a href="https://webrogs.in" target="_blank" style="color:var(--gold);">webrogs.in</a></p>
       </div>
     </div>
   </footer>
